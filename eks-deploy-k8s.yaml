@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: $CONTAINER_IMAGE
+        image: $registry:$TAG
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
