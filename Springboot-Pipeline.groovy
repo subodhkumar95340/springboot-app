@@ -44,7 +44,7 @@ pipeline{
             // Also, run this command on jenkin server: sudo usermod -a -G docker jenkins
             steps {
                 script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImage = docker.build registry + ":latest"
                 }
             }
         }
@@ -59,7 +59,7 @@ pipeline{
         }
         stage('Removing Image from Jenkins Server'){
             steps{
-                sh "docker rmi $registry:$BUILD_NUMBER"
+                sh "docker rmi $registry:latest"
             }
         }
         stage('EKS Deployment') {
