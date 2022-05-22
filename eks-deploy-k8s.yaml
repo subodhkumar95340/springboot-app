@@ -9,7 +9,10 @@ spec:
   selector:
     matchLabels:
       app: springboot-app
-      role: rolling-update
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
   template:
     metadata:
       labels:
