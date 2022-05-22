@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: 461655781674.dkr.ecr.us-east-2.amazonaws.com/jenkin-pipeline-build-demo:latest
+        #image: 461655781674.dkr.ecr.us-east-2.amazonaws.com/jenkin-pipeline-build-demo:latest
+        image: 461655781674.dkr.ecr.us-east-2.amazonaws.com/jenkin-pipeline-build-demo:*:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
