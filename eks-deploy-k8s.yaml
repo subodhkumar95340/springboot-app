@@ -5,7 +5,7 @@ metadata:
     app: springboot-app
   name: springboot-app
 spec:
-  replicas: 6
+  replicas: 3
   strategy:
     type: RollingUpdate
     rollingUpdate:
